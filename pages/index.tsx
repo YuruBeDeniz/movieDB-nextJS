@@ -15,11 +15,11 @@ const Home: NextPage = () => {
 
   const { data, fetchNextPage, isLoading, isFetching, error } = useFetchMovies(query);
   
-  console.log(data)
+  //console.log(data)
 
   return (
    <main className="relative h-screen overflow-y-scroll">
-    <Header />
+    <Header setQuery={setQuery} />
     <Hero />
     <Grid />
     <Spinner />
