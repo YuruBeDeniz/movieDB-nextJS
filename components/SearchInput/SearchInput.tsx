@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 
 
 type SearchInputProps = {
-    setQuery: React.Dispatch<React.SetStateAction<string>>
+  setQuery: React.Dispatch<React.SetStateAction<string>>
 }
 
 const SearchInput = ({ setQuery }: SearchInputProps) => {
@@ -44,7 +44,7 @@ export default SearchInput;
 
 //the search input is only used in the header and it's only going to ever receive
 //this setQuery so it's very very specific for this component. it is not reusable.
-//go back to papges/index and hover over setQuery to see the type: it's generic
+//go back to pages/index and hover over setQuery to see the type: it's generic
 //and specified as string
 
 //const SearchInput: React.FC<SearchInputProps> = ({ setQuery }) => {}

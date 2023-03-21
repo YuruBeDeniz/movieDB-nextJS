@@ -8,7 +8,7 @@ const Thumb = ({ imgUrl }: ThumbProps) => {
   return (
     <Image 
        placeholder="blur"
-       blurDataURL="/placerholder.jpg"
+       blurDataURL="/placeholder.jpg"
        className="rounded-lg"
        layout="fill"
        objectFit="cover"

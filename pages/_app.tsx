@@ -12,3 +12,5 @@ function MyApp({ Component, pageProps }: AppProps) {
 )};
 
 export default MyApp
+
+//here we can wrap things that we want to be visible on all the pages

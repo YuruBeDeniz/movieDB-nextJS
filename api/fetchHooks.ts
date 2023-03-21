@@ -1,20 +1,21 @@
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { fetchMovies } from "./fetchFunctions";
-//types
-import { Movies } from "./types";
+import { useInfiniteQuery } from '@tanstack/react-query';
+// Fetch function
+import { fetchMovies } from './fetchFunctions';
+// Types
+import { Movies } from './types';
 
 export const useFetchMovies = (search: string) => {
-    return useInfiniteQuery(['movies', search], ({ pageParam = 1 }) => fetchMovies(search, pageParam), {
-      getNextPageParam: (lastPage: Movies) => {
-        if (lastPage.page < lastPage.total_pages) {
-          return lastPage.page + 1;
-        }
-  
-        return undefined;
-      },
-      refetchOnWindowFocus: false
-    });
-  };
+  return useInfiniteQuery(['movies', search], ({ pageParam = 1 }) => fetchMovies(search, pageParam), {
+    getNextPageParam: (lastPage: Movies) => {
+      if (lastPage.page < lastPage.total_pages) {
+        return lastPage.page + 1;
+      }
+
+      return undefined;
+    },
+    refetchOnWindowFocus: false
+  });
+};
 
 
 //useInfiniteQuery: as we'll load more pages when we scroll, it could also be that
